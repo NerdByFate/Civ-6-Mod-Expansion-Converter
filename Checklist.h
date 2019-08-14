@@ -20,8 +20,8 @@ public:
 
 	//SFML Overrides
 	void setPosition(float x, float y);
-	void setPosition(sf::Vector2f pos);
-	sf::Vector2f getPosition();
+	void setPosition(const sf::Vector2f pos);
+	sf::Vector2f getPosition() const;
 
 	//Getters & Setters
 	sf::RectangleShape GetBackground() const;
@@ -79,6 +79,5 @@ private:
 	sf::Font font;
 	sf::Clock checkTimer;
 	bool canScroll;
-	int eventIndex;
 };
 #endif //CHECKLIST_H

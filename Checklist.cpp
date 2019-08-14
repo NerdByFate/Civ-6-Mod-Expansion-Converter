@@ -249,7 +249,7 @@ void Checklist::setPosition(float x, float y) {
 	cView.setViewport(sf::FloatRect(x / 1280, y / 720, background.getSize().x / 1280, background.getSize().y / 720));
 }
 
-void Checklist::setPosition(sf::Vector2f pos) {
+void Checklist::setPosition(const sf::Vector2f pos) {
 	background.setPosition(pos.x, pos.y);
 
 	scrollAxisArray[0].position = sf::Vector2f(background.getPosition().x + (background.getSize().x - 16), background.getPosition().y + 16);
@@ -271,7 +271,7 @@ void Checklist::setPosition(sf::Vector2f pos) {
 	cView.setViewport(sf::FloatRect(pos.x / 1280, pos.y / 720, background.getSize().x / 1280, background.getSize().y / 720));
 }
 
-sf::Vector2f Checklist::getPosition() {
+sf::Vector2f Checklist::getPosition() const {
 	return GetBackground().getPosition();
 }
 
